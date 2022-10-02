@@ -3,10 +3,10 @@
     <channel>
         <title>GameTime Version - Appcast</title>
         <item>
-            <title>Version 2.1.7</title>
-            <description>Firebase Analytics</description>
-            <pubDate>Wed, 21 Sep 2022 10:00:00 +0000</pubDate>
-            <enclosure url="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile" sparkle:version="2.1.7" sparkle:os="android" />
+            <title>Version 2.1.8</title>
+            <description>Null Check Killa</description>
+            <pubDate>Sat, 01 Oct 2022 10:00:00 +0000</pubDate>
+            <enclosure url="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile" sparkle:version="2.1.8" sparkle:os="android" />
         </item>
     </channel>
 </rss>
