@@ -3,10 +3,10 @@
     <channel>
         <title>GameTime Version - Appcast</title>
         <item>
-            <title>Version 2.1.8</title>
-            <description>Null Check Killa</description>
-            <pubDate>Sat, 01 Oct 2022 10:00:00 +0000</pubDate>
-            <enclosure url="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile" sparkle:version="2.1.8" sparkle:os="android" />
+            <title>Version 3.1.0</title>
+            <description>The Great 32</description>
+            <pubDate>Sat, 12 Nov 2022 10:00:00 +0000</pubDate>
+            <enclosure url="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile" sparkle:version="3.1.0" sparkle:os="android" />
         </item>
     </channel>
 </rss>
