@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
-        <title>GameTime Version - Appcast</title>
+        <title>GameTime Market Version - Appcast</title>
         <item>
-            <title>Version 3.1.0</title>
+            <title>Version 3.2.0</title>
             <description>The Great 32</description>
-            <pubDate>Sat, 12 Nov 2022 10:00:00 +0000</pubDate>
-            <enclosure url="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile" sparkle:version="3.1.0" sparkle:os="android" />
+            <pubDate>Sat, 19 Nov 2022 10:00:00 +0000</pubDate>
+            <enclosure url="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile" sparkle:version="3.2.0" sparkle:os="android" />
         </item>
     </channel>
 </rss>
