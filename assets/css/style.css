@@ -1,5 +1,12 @@
 body{
-    background-color: #FFF;
+    background-color: #000;
+    color: #F5F5F5;
+    font-family: 'Nunito' !important;
+}
+
+h2,h3, h4{
+    color: #FFF;
+    font-family: 'Nunito' !important;
 }
 
 .logo-icon{
@@ -7,9 +14,13 @@ body{
     height: 50px;
 }
 
+.mb-3, .source-info{
+    color: #000;
+}
+
 
 .logo-text{
-    color: #000;
+    color: #FFF;
     font-size:42px;
     font-family: 'Birthstone'
 }
@@ -17,4 +28,49 @@ body{
 .site-headline{
     font-family: 'Nunito' !important;
     text-align: center;
+}
+
+input{
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 5px;
+    height: 60px;
+    outline-color: #FFF;
+}
+
+#imageContainer
+{
+    display:block;
+    align-items: center;
+    position:relative;
+    width: 530px;
+    height: 450px;
+    margin: 0 auto;
+
+}
+
+#imageContainer .img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#imageContainer:before
+{
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:inset 0px 0px 6px 6px rgba(10,10,10,1);
+    -webkit-box-shadow:inset 0px 0px 6px 6px rgba(10,10,10,1);
+    box-shadow:inset 0px 0px 6px 6px rgba(10,10,10,1);
+}
+
+.footer a{
+    color: #FFF;
+}
+
+button,[type="button"],[type="reset"],[type="submit"] {
+    background-color: rgba(208, 101, 50, 255);
+    color: #FFFFFF;
 }

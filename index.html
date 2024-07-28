@@ -25,18 +25,6 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 	<link id="theme-style" rel="stylesheet" href="assets/css/style.css">
-	<script type="text/javascript">
-		console.log(navigator.userAgent);
-		if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)){
-			window.location = "https://apps.apple.com/us/app/gametime-market/id1586518205"; 
-		}
-
-
-		if(navigator.userAgent.match(/Android/i)){
-			window.location = "https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile"; 
-		}
-	</script>
-
 </head> 
 
 <body>
@@ -48,20 +36,34 @@
             <div class="container position-relative">
 
 				<nav class="navbar navbar-expand-lg" >
-                    <h1 class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon" src="assets/images/logo-black.png" alt="logo"> <label class="logo-text">GameTime Market</label></a></h1>
+                    <h1 class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon" src="assets/images/logo-white.png" alt="logo"> <label class="logo-text">GameTime Market</label></a></h1>
 				</nav>
 				
 				<div class="site-headline">
-				    <h2 class="site-headline">NBA Fantasy Stock Market</h2>
-				    <div class="site-tagline">Buy and Sell stocks of players to win big in GameTime fantasy matches with your portfolio</div>
-				    <img class="mt-lg-5" src="assets/images/hero-figure.jpg"/>
-					<div class="cta-btns mt-lg-5">
+					<h2 class="site-headline">NBA exchange</h2>
+				    <div class="site-tagline">Invest in stocks of NBA players</div>
+					<div id="imageContainer">
+						<img class="mt-lg-5" src="assets/images/hero-figure-small.jpg"/>
+					</div>
+					<br>
+				    
+					<!-- <div class="cta-btns mt-lg-5">
 					    <ul class="app-stores list-unstyled list-inline mx-auto mx-md-0 d-inline-block">
 						    <li class="list-inline-item mr-3"><a href="https://apps.apple.com/us/app/gametime-market/id1586518205"><img class="ios" src="assets/images/appstore-apple.svg" alt="app-store"></a></li>
 						    <li class="list-inline-item"><a href="https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile"><img class="android" src="assets/images/appstore-android.svg" alt="google play"></a></li>
 					    </ul>
 				    </div>
-					<p class="site-headline font-weight-bold mt-lg-1">In Beta</p>
+					 -->
+					 <div class="cta-btns mt-lg-5">
+					 <p class="site-headline font-weight-bold mt-lg-1">Sign up now to be a part of the exclusive BETA</p>
+					 <form action="http://127.0.0.1:5001/gametime--market/europe-west1/betaSignUp" method="post">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name"><br><br>
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email"><br><br>
+						<input type="submit" value="Submit">
+					  </form> 
+					 </div>
 			    </div>    
             </div><!--//container-->
 			
@@ -181,7 +183,7 @@
     </section>//cta-section -->
     
     
-    <section id="quote" class="testimonial-section theme-bg-primary py-5">
+    <section id="quote" class="testimonial-section py-5">
 	    <div class="container py-lg-5">
 		    <h3 class="mb-1 mb-md-5 text-center">Loved by thousands of fantasy sports lovers like you</h3>
 		    
@@ -415,6 +417,36 @@
     <!-- Page Specific JS -->
     <script type="text/javascript" src="assets/plugins/jquery-flipster/dist/jquery.flipster.min.js"></script> 
     <script type="text/javascript" src="assets/js/flipster-custom.js"></script> 
+
+	<script type="text/javascript">
+		console.log(navigator.userAgent);
+//		if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)){
+//			window.location = "https://apps.apple.com/us/app/gametime-market/id1586518205"; 
+//		}
+
+
+//		if(navigator.userAgent.match(/Android/i)){
+//			window.location = "https://play.google.com/store/apps/details?id=com.gametime.gametime_mobile"; 
+//		}
+$(document).ready(function(){
+	var form = document.querySelector("form");
+	form.onsubmit = function(event) {
+		event.preventDefault();
+		var name = $("#name").val();
+		var email = $("#email").val();
+		const postUserUrl = "https://europe-west1-gametime--market.cloudfunctions.net/betaSignUp";
+		//const postUserUrl = "http://127.0.0.1:5001/gametime--market/europe-west1/betaSignUp";
+		$.get(postUserUrl,{
+				name,
+				email},
+			function (data) {
+				document.location.href = "thanks.html"
+			}
+		);
+		return false;
+	}
+});
+	</script>
 
 
 </body>
